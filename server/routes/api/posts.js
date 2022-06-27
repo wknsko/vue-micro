@@ -22,7 +22,7 @@ router.post('/', async(req, res) => {
 
 router.delete('/:id', async(req, res) => {
     const posts = await loadPostsCollection();
-    await posts.deleteOne({ _id: new ObjectId(req.params.id) });
+    await posts.deleteOne({ "_id": ObjectId(req.params.id) });
     res.status(200).send({});
 });
 
